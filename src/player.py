@@ -1,4 +1,4 @@
-from item import Food, Egg
+from item import Food, Egg, Ramen
 
 # Write a class to hold player information, e.g. what room they are in
 # currently.

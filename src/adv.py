@@ -1,6 +1,6 @@
 from room import Room
 from player import Player
-from item import Item, Food, Egg
+from item import Item, Food, Egg, Ramen
 
 # Declare all the rooms
 room = {
@@ -30,6 +30,7 @@ room['treasure'].s_to = room['narrow']
 rock = Item("rock", "This is a rock.")
 sandwich = Food("sandwich", "This is a delicious sandwich.", 100)
 egg = Egg()
+ramen = Ramen()
 
 # Main
 #
@@ -39,9 +40,12 @@ player.items.append(rock)
 player.items.append(sandwich)
 player.items.append(egg)
 print(player.current_room)
+
 player.eat(rock)
 player.eat(sandwich)
 player.eat(egg)
+player.eat(ramen)
+
 # Write a loop that:
 #
 # * Prints the current room name
