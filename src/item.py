@@ -32,13 +32,3 @@ class Ramen(Food):
 #     def __init__(self):
 #         super().__init__("axe", "built for splitting logs... and heads", 50)
 
-
-# make class for picking up items
-# class Pick_Up(Item):
-#     def __init__(self, cmd):
-#         player.items.append(cmd)
-
-
-# # Make Class for dropping it
-# class Drop_item:
-#     pass

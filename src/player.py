@@ -10,13 +10,14 @@ class Player:
         self.inventory = []
         self.strength = 100
 
-
+    # Navigation/Movement functionality
     def travel(self, direction):
         if getattr(self.current_room, f"{direction}_to"):
             self.current_room = getattr(self.current_room, f"{direction}_to")
             print(self.current_room)
         else:
             print("You cannot move in that direction")
+    # Character Inventory
     def inventory_name(self):
         inventory_item_names = []
         # print("You are holding: ")
@@ -25,13 +26,13 @@ class Player:
             # print(item.name)
         return inventory_item_names
 
-
     def print_inventory(self):
         inventory_item_names = []
         print("You are holding: ")
         for item in self.inventory:
             print(item.name)
 
+    # 'Eat' functionality
     def eat(self, food_item):
         if not isinstance(food_item, Food):
             print(f"You cannot eat {food_item.name}")

@@ -71,6 +71,9 @@ while True:
         player.travel(cmd)
     elif cmd == "i":
         player.print_inventory()
+    
+    # Press 'p' to see list of items to available 
+    # in room, option to select item
     elif cmd == "p":
         print(f"You see {player.current_room.items} near you")
         cmd = input("What would you like to pick up: ")
@@ -79,6 +82,9 @@ while True:
             Player.print_inventory(player)
         else:
             print(f"You can only pick up {player.current_room.items}")
+    
+    # Press 'd' to see list of items in inventory 
+    # available to be dropped
     elif cmd == "d":
         print(Player.print_inventory(player))
         cmd = input("What would you like to drop: ")
@@ -88,7 +94,7 @@ while True:
         else:
             print(f"You can only drop {Player.inventory_name(player)}")
         
-        
+    
     else:
         print("I did not understand that command\n")
         print(f"you can travel with {valid_directions}\n")

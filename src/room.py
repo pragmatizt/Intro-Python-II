@@ -12,12 +12,15 @@ class Room:
         self.e_to = None
         self.w_to = None
         self.items = items
+    # Output of room's attributes in Terminal
     def __str__(self):
         return_string = "---------"
         return_string += "\n\n"
         return_string += self.name
         return_string += "\n\n"
         return_string += self.description
+        return_string += "\n\n"
+        return_string += "['p'] - pick up, ['d'] - drop item"
         return_string += "\n\n"
         return_string += f"{self.get_exits_string()}"
         return return_string
