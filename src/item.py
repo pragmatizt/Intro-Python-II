@@ -1,8 +1,13 @@
+
 class Item:
     def __init__(self, name, description):
         self.name = name
         self.description = description
 
+    def __str__(self):
+        return_string += self.name
+        return_string += f"{self.get_exits_string()}"
+        return return_string
 
 class Food(Item):
     def __init__(self, name, description, calories):
@@ -26,3 +31,14 @@ class Ramen(Food):
 # class Axe(Weapon):
 #     def __init__(self):
 #         super().__init__("axe", "built for splitting logs... and heads", 50)
+
+
+# make class for picking up items
+# class Pick_Up(Item):
+#     def __init__(self, cmd):
+#         player.items.append(cmd)
+
+
+# # Make Class for dropping it
+# class Drop_item:
+#     pass
